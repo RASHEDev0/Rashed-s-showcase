@@ -1,0 +1,275 @@
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 0;
+    overflow: hidden;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.timeline-container {
+    padding: 20px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.timeline-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-container.left {
+    left: 0;
+}
+
+.timeline-container.right {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    font-weight: bold;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-container.left::before, .timeline-container.right::before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 4px;
+    background-color: #0070ba;
+    border-radius: 2px;
+}
+
+.timeline-container.left::before {
+    right: -25px;
+}
+
+.timeline-container.right::before {
+    left: -25px;
+}
+
+/* _____________________________ */
+
+.projects-dashboard {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-dashboard h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #008eec;
+    font-size: 2rem;
+}
+
+.project {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #0070ba;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-shadow: 1px 1px #878787 ;
+}
+
+.project p {
+    margin: 10px 0;
+    color: #666;
+    font-weight: 700;
+    display: inline;
+}
+
+.project .branch{
+    color: green;
+}
+
+.progress-bar {
+    background-color: #f4f4f4;
+    border-radius: 17px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.progress {
+    background-color: #0070ba;
+    height: 20px;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+span {
+    font-weight: bold;
+    color: #0070ba;
+}
+
+/* Animation to show progress */
+.project .progress {
+    width: 0%; /* Example percentage, can be dynamic */
+}
+
+
+/* _______________________________ */
+
+
+.blog {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #008eec;
+    font-size: 2rem;
+}
+
+.blog-post {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.blog-post h3 {
+    margin-top: 0;
+    color: #0070ba;
+    text-shadow: 1px 2px #878787 ;
+    font-size: 1.5rem;
+}
+
+.blog-post p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.blog-post a {
+    text-decoration: none;
+    color: #0070ba;
+    font-weight: bold;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* donate button */
+#supportButton {
+    background-color: #00ba28;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#supportButton:hover {
+    background-color: #005a99;
+}
+
+/* scroll to up and down button */
+
+.scroll-buttons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scroll-buttons button {
+    background-color: #0070ba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hide the buttons */
+    visibility: hidden;
+}
+
+.scroll-buttons button.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-buttons button:hover {
+    background-color: #005a99;
+}
+
+.marked{
+    color: #0382dd;
+}
+
+#cv-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cv-image {
+    max-width: 70%;
+    height: auto;
+}
+
+#see-more-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+
+
+
